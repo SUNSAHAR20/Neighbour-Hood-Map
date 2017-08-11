@@ -8,4 +8,4 @@ Steps:
 1. Clone the repository using "git clone https://github.com/SUNSAHAR20/Neighbour-Hood-Map.git"
 2. Open index.html.
 	OR
-1. Open https://sunsahar20.github.io/Neighbour-Hood-Map/
+1. Open https://SUNSAHAR20.github.io/Neighbour-Hood-Map/
