@@ -1,0 +1,99 @@
+
+html, body {
+	font-family: 'Cuprum', sans-serif;
+	font-size: 18px;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+ul {
+	margin: 10px 5px 5px 0;
+	padding-left: 0px !important;
+}
+
+li {
+	padding: 10px;
+	cursor: pointer;
+	border-bottom: 1px solid blue;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+li:hover 
+{
+	background:blue;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.restaurant-list input {
+	width: 96%;
+	line-height: 4;
+	border: 2px solid red;
+	padding-left: 10px;
+}
+
+.restaurant-list {
+	width: 25%;
+	background-color: yellow;
+}
+
+#google_map {
+	width: 75%;
+	height: 100%;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 480px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.restaurant-list {
+		width: 100%;
+		height: 50%;
+		overflow-y: scroll;
+	}
+
+	.restaurant-list input {
+	line-height: 3;
+	width: 100%;
+	border: 1px solid red;
+}
+
+	#google_map {
+		width: 100%;
+		height: 50%;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.restaurant-list {
+		width: 100%;
+		height: 45%;
+		overflow-y: scroll;
+	}
+
+	.restaurant-list input {
+	line-height: 2;
+	width: 100%;
+	border: 1px solid red;
+}
+
+li{
+	padding: 8px;
+}
+
+	#google_map {
+		width: 100%;
+		height: 55%;
+	}
+}
