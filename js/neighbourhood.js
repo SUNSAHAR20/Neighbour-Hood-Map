@@ -43,9 +43,9 @@ model.openInfoWindow = function(loc_name) {
 function resInfo(name, long, lat, cuisine, rating) {
     var self = this;
     this.name = name;
-    this.info = name + '<br>' + cuisine + '<br>' + 'Rating - ' + rating;
-    this.lat = lat;
     this.long = long;
+    this.lat = lat;
+    this.info = name + '<br>' + cuisine + '<br>' + 'Rating - ' + rating;
     this.markInfoWindow = ko.computed(function() {
         if (model.google_maps()) {
             self.infoWindow = new google.maps.InfoWindow();
