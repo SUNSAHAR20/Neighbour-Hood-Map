@@ -17,12 +17,12 @@ model.google_maps = ko.observable(!!window.google);
 model.spot = ko.observableArray([]);
 function onLoad() {
     model.spot = ko.observableArray([
-        new Loc(response.restaurants[0].restaurant.name, response.restaurants[0].restaurant.location.latitude, response.restaurants[0].restaurant.location.longitude, response.restaurants[0].restaurant.cuisines, response.restaurants[0].restaurant.user_rating.aggregate_rating),
-        new Loc(response.restaurants[1].restaurant.name, response.restaurants[1].restaurant.location.latitude, response.restaurants[1].restaurant.location.longitude, response.restaurants[1].restaurant.cuisines, response.restaurants[1].restaurant.user_rating.aggregate_rating),
-        new Loc(response.restaurants[2].restaurant.name, response.restaurants[2].restaurant.location.latitude, response.restaurants[2].restaurant.location.longitude, response.restaurants[2].restaurant.cuisines, response.restaurants[2].restaurant.user_rating.aggregate_rating),
-        new Loc(response.restaurants[3].restaurant.name, response.restaurants[3].restaurant.location.latitude, response.restaurants[3].restaurant.location.longitude, response.restaurants[3].restaurant.cuisines, response.restaurants[3].restaurant.user_rating.aggregate_rating),
-        new Loc(response.restaurants[4].restaurant.name, response.restaurants[4].restaurant.location.latitude, response.restaurants[4].restaurant.location.longitude, response.restaurants[4].restaurant.cuisines, response.restaurants[4].restaurant.user_rating.aggregate_rating),
-        new Loc(response.restaurants[5].restaurant.name, response.restaurants[5].restaurant.location.latitude, response.restaurants[5].restaurant.location.longitude, response.restaurants[5].restaurant.cuisines, response.restaurants[5].restaurant.user_rating.aggregate_rating)
+        new resInfo(response.restaurants[0].restaurant.name, response.restaurants[0].restaurant.location.longitude, response.restaurants[0].restaurant.location.latitude, response.restaurants[0].restaurant.cuisines, response.restaurants[0].restaurant.user_rating.aggregate_rating),
+        new resInfo(response.restaurants[1].restaurant.name, response.restaurants[1].restaurant.location.longitude, response.restaurants[1].restaurant.location.latitude, response.restaurants[1].restaurant.cuisines, response.restaurants[1].restaurant.user_rating.aggregate_rating),
+        new resInfo(response.restaurants[2].restaurant.name, response.restaurants[2].restaurant.location.longitude, response.restaurants[2].restaurant.location.latitude, response.restaurants[2].restaurant.cuisines, response.restaurants[2].restaurant.user_rating.aggregate_rating),
+        new resInfo(response.restaurants[3].restaurant.name, response.restaurants[3].restaurant.location.longitude, response.restaurants[3].restaurant.location.latitude, response.restaurants[3].restaurant.cuisines, response.restaurants[3].restaurant.user_rating.aggregate_rating),
+        new resInfo(response.restaurants[4].restaurant.name, response.restaurants[4].restaurant.location.longitude, response.restaurants[4].restaurant.location.latitude, response.restaurants[4].restaurant.cuisines, response.restaurants[4].restaurant.user_rating.aggregate_rating),
+        new resInfo(response.restaurants[5].restaurant.name, response.restaurants[5].restaurant.location.longitude, response.restaurants[5].restaurant.location.latitude, response.restaurants[5].restaurant.cuisines, response.restaurants[5].restaurant.user_rating.aggregate_rating)
     ]);
 }
 model.input = ko.observable('');
@@ -40,7 +40,7 @@ model.openInfoWindow = function(loc_name) {
     google.maps.event.trigger(loc_name.marker, "click");
 };
 
-function Loc(name, lat, long, cuisine, rating) {
+function resInfo(name, long, lat, cuisine, rating) {
     var self = this;
     this.name = name;
     this.info = name + '<br>' + cuisine + '<br>' + 'Rating - ' + rating;
