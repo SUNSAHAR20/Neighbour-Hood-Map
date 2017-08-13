@@ -49,13 +49,11 @@ function resInfo(name, long, lat, cuisine, rating) {
     this.markInfoWindow = ko.computed(function() {
         if (model.google_maps()) {
             self.infoWindow = new google.maps.InfoWindow();
-            self.icon = 'http://www.googlemapsmarkers.com/v1/990000/';
             self.marker = new google.maps.Marker({
                 position: new google.maps.LatLng(self.lat, self.long),
                 animation: google.maps.Animation.DROP,
                 map: neighbourhood,
                 name: self.name,
-                icon: self.icon,
             });
             self.addEventListener = google.maps.event.addListener(self.marker, 'click', function() {
                 while(i < model.spot.length) {
