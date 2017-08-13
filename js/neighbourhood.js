@@ -9,7 +9,7 @@ function firstLoc() {
             zoom: 17,
             disableDefaultUI: true
     };
-    neighbourhood = new google.maps.Map(document.getElementById('google_map'), features);
+    neighbourhood = new google.maps.Map(document.getElementById('google-map'), features);
     model.google_maps(!!window.google);
 }
 
@@ -80,7 +80,7 @@ function toggleBounce(marker) {
     }
 }
 
-google_alert = function() {
+var google_alert = function() {
     alert("Google Maps has been facing some technical issues. Will be soon resolved. Sorry for the inconvenience.");
 };
 

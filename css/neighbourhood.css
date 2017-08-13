@@ -43,7 +43,7 @@ li:hover
 	background-color: yellow;
 }
 
-#google_map {
+#google-map {
 	width: 75%;
 	height: 100%;
 }
@@ -65,7 +65,7 @@ li:hover
 	border: 1px solid red;
 }
 
-	#google_map {
+	#google-map {
 		width: 100%;
 		height: 50%;
 	}
@@ -92,7 +92,7 @@ li{
 	padding: 8px;
 }
 
-	#google_map {
+	#google-map {
 		width: 100%;
 		height: 55%;
 	}
